@@ -58,7 +58,7 @@ If you want to build the windows installer with `make deploy` you need [NSIS](ht
 
 Acquire the source in the usual way:
 
-    git clone https://github.com/dashpay/dash.git
+    git clone https://github.com/hitboxaltcoin/dash.git
     cd dash
 
 ### Building for 64-bit Windows
