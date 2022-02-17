@@ -98,7 +98,7 @@ public:
         vOutpoints.assign(setSelected.begin(), setSelected.end());
     }
 
-    // Dash-specific helpers
+    // Vuicoin-specific helpers
 
     void UsePrivateSend(bool fUsePrivateSend)
     {

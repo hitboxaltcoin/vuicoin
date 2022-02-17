@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-# Copyright (c) 2015-2020 The Dash Core developers
+# Copyright (c) 2015-2020 The Vuicoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 from collections import namedtuple
 
 from test_framework.mininode import *
-from test_framework.test_framework import DashTestFramework
+from test_framework.test_framework import VuicoinTestFramework
 from test_framework.util import p2p_port, assert_equal, sync_blocks
 
 '''
@@ -36,7 +36,7 @@ class TestNode(P2PInterface):
         return self.last_mnlistdiff
 
 
-class LLMQCoinbaseCommitmentsTest(DashTestFramework):
+class LLMQCoinbaseCommitmentsTest(VuicoinTestFramework):
     def set_test_params(self):
         self.set_vuicoin_test_params(4, 3, fast_dip3_enforcement=True)
         self.set_vuicoin_dip8_activation(200)
@@ -55,7 +55,7 @@ class LLMQCoinbaseCommitmentsTest(DashTestFramework):
         mnList = self.test_getmnlistdiff(null_hash, self.nodes[0].getbestblockhash(), {}, [], expectedUpdated)
         expectedUpdated2 = expectedUpdated + []
 
-        # Register one more MN, but don't start it (that would fail as DashTestFramework doesn't support this atm)
+        # Register one more MN, but don't start it (that would fail as VuicoinTestFramework doesn't support this atm)
         baseBlockHash = self.nodes[0].getbestblockhash()
         self.prepare_masternode(self.mn_count)
         new_mn = self.mninfo[self.mn_count]

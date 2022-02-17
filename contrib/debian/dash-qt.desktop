@@ -1,14 +1,14 @@
 [Desktop Entry]
 Version=1.0
-Name=Dash Core
-Comment=Dash P2P Cryptocurrency
-Comment[de]=Verbinde mit dem Dash peer-to-peer Netzwerk
-Comment[fr]=Dash, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Dash, eşten eşe kriptografik sanal para birimi
+Name=Vuicoin Core
+Comment=Vuicoin P2P Cryptocurrency
+Comment[de]=Verbinde mit dem Vuicoin peer-to-peer Netzwerk
+Comment[fr]=Vuicoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Vuicoin, eşten eşe kriptografik sanal para birimi
 Exec=vuicoin-qt %u
 Terminal=false
 Type=Application
 Icon=vuicoin128
 MimeType=x-scheme-handler/vuicoin;
 Categories=Office;Finance;
-StartupWMClass=Dash-qt
+StartupWMClass=Vuicoin-qt

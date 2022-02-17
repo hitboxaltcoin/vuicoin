@@ -12,7 +12,7 @@
  * for both vuicoind and vuicoin-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Dash Core");
+const std::string CLIENT_NAME("Vuicoin Core");
 
 /**
  * Client version number

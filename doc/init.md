@@ -68,9 +68,9 @@ can then be controlled by group membership.
 ### Mac OS X
 
 Binary:              `/usr/local/bin/vuicoind`  
-Configuration file:  `~/Library/Application Support/DashCore/vuicoin.conf`  
-Data directory:      `~/Library/Application Support/DashCore`  
-Lock file:           `~/Library/Application Support/DashCore/.lock`  
+Configuration file:  `~/Library/Application Support/VuicoinCore/vuicoin.conf`  
+Data directory:      `~/Library/Application Support/VuicoinCore`  
+Lock file:           `~/Library/Application Support/VuicoinCore/.lock`  
 
 Installing Service Configuration
 -----------------------------------

@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019 The Dash Core developers
+// Copyright (c) 2014-2019 The Vuicoin Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -513,7 +513,7 @@ void CSuperblock::ParsePaymentSchedule(const std::string& strPaymentAddresses, c
         CTxDestination dest = DecodeDestination(vecParsed1[i]);
         if (!IsValidDestination(dest)) {
             std::ostringstream ostr;
-            ostr << "CSuperblock::ParsePaymentSchedule -- Invalid Dash Address : " << vecParsed1[i];
+            ostr << "CSuperblock::ParsePaymentSchedule -- Invalid Vuicoin Address : " << vecParsed1[i];
             LogPrintf("%s\n", ostr.str());
             throw std::runtime_error(ostr.str());
         }

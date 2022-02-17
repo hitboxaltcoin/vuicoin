@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2020 The Dash Core developers
+// Copyright (c) 2014-2020 The Vuicoin Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1096,7 +1096,7 @@ UniValue getsuperblockbudget(const JSONRPCRequest& request)
 static const CRPCCommand commands[] =
 { //  category              name                      actor (function)         argNames
   //  --------------------- ------------------------  -----------------------  ----------
-    /* Dash features */
+    /* Vuicoin features */
     { "vuicoin",               "getgovernanceinfo",      &getgovernanceinfo,      {} },
     { "vuicoin",               "getsuperblockbudget",    &getsuperblockbudget,    {"index"} },
     { "vuicoin",               "gobject",                &gobject,                {} },

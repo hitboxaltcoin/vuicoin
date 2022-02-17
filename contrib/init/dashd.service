@@ -8,7 +8,7 @@
 # /etc/vuicoin/vuicoin.conf
 
 [Unit]
-Description=Dash daemon
+Description=Vuicoin daemon
 After=network.target
 
 [Service]

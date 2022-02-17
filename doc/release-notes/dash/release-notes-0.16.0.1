@@ -1,4 +1,4 @@
-Dash Core version 0.16
+Vuicoin Core version 0.16
 ======================
 
 Release is now available from:
@@ -23,14 +23,14 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/Dash-Qt (on Mac) or
+installer (on Windows) or just copy over /Applications/Vuicoin-Qt (on Mac) or
 vuicoind/vuicoin-qt (on Linux). If you upgrade after DIP0003 activation and you were
 using version < 0.13 you will have to reindex (start with -reindex-chainstate
 or -reindex) to make sure your wallet has all the new data synced. Upgrading
 from version 0.13 should not require any additional actions.
 
 When upgrading from a version prior to 0.14.0.3, the
-first startup of Dash Core will run a migration process which can take a few
+first startup of Vuicoin Core will run a migration process which can take a few
 minutes to finish. After the migration, a downgrade to an older version is only
 possible with a reindex (or reindex-chainstate).
 
@@ -55,7 +55,7 @@ Notable changes
 Block Reward Reallocation
 -------------------------
 This version implements Block Reward Reallocation which was proposed in order
-to slow the growth rate of Dash’s circulating supply by encouraging the
+to slow the growth rate of Vuicoin’s circulating supply by encouraging the
 formation of masternodes and was voted in by the network. The resulting allocation
 will split all non-proposal block rewards 40% toward miners and 60% toward
 masternodes in the end-state once the transition period is complete.
@@ -98,7 +98,7 @@ each period.
 
 Dynamic Activation Thresholds
 -----------------------------
-In Dash we have used lower thresholds (80% vs 95% in BTC) to activate upgrades
+In Vuicoin we have used lower thresholds (80% vs 95% in BTC) to activate upgrades
 via a BIP9-like mechanism for quite some time. While it's preferable to have as much
 of the network hashrate signal update readiness as possible, this can result in
 quite lengthy upgrades if one large non-upgraded entity stalls
@@ -176,7 +176,7 @@ and then eventually PoSe banned.
 
 Network performance improvements
 --------------------------------
-This version of Dash Core includes multiple optimizations to the network and p2p message
+This version of Vuicoin Core includes multiple optimizations to the network and p2p message
 handling code. The most important one is the introduction of `epoll` on linux-based
 systems. This removes most of the CPU overhead caused by the sub-optimal use of `select`,
 which could easily use up 50-80% of the CPU time spent in the network thread when many
@@ -206,9 +206,9 @@ For backwards compatibility, wallet paths that are names of existing data files
 in the `--walletdir` directory will continue to be accepted and interpreted the
 same as before.
 
-When Dash Core is not started with any `--wallet=<path>` options, the name of
+When Vuicoin Core is not started with any `--wallet=<path>` options, the name of
 the default wallet returned by `getwalletinfo` and `listwallets` RPCs is
-now the empty string `""` instead of `"wallet.dat"`. If Dash Core is started
+now the empty string `""` instead of `"wallet.dat"`. If Vuicoin Core is started
 with any `--wallet=<path>` options, there is no change in behavior, and the
 name of any wallet is just its `<path>` string.
 
@@ -253,12 +253,12 @@ This feature specifically should help users who had font size/scaling issues pre
 
 For advanced users and developers there is a new way to control the wallet's look
 by specifying a path to custom css files via `--custom-css-dir`. Additionally, the new
-`--debug-ui` will force Dash Core to reload the custom css files as soon as they get updated
+`--debug-ui` will force Vuicoin Core to reload the custom css files as soon as they get updated
 which makes it possible to see and debug all css adjustments live in the running GUI.
 
-From now on the "Pay To" field in "Send" and "PrivateSend" tabs also accepts Dash URIs.
-The Dash address and the amount from the URI are assigned to corresponding fields automatically
-if a Dash URI gets pasted into the field.
+From now on the "Pay To" field in "Send" and "PrivateSend" tabs also accepts Vuicoin URIs.
+The Vuicoin address and the amount from the URI are assigned to corresponding fields automatically
+if a Vuicoin URI gets pasted into the field.
 
 Sporks
 ------
@@ -275,7 +275,7 @@ and was also removed in this version.
 
 Build system
 ------------
-The minimum version of the GCC compiler required to compile Dash Core is now 4.8.
+The minimum version of the GCC compiler required to compile Vuicoin Core is now 4.8.
 The minimum version of Qt is now 5.5.1. Some packages in `depends/` as well as
 `secp256k1` and `leveldb` subtrees were updated to newer versions.
 
@@ -344,8 +344,8 @@ Backports from Bitcoin Core 0.16
 --------------------------------
 
 Most of the changes between Bitcoin Core 0.15 and Bitcoin Core 0.16 have been
-backported into Dash Core 0.16. We only excluded backports which do not align
-with Dash, like SegWit or RBF related changes.
+backported into Vuicoin Core 0.16. We only excluded backports which do not align
+with Vuicoin, like SegWit or RBF related changes.
 
 You can read about changes brought by backporting from Bitcoin Core 0.16 in
 following docs:
@@ -453,7 +453,7 @@ See detailed [set of changes](https://github.com/hitboxaltcoin/vuicoin/compare/v
 - [`bac02d0c9a`](https://github.com/hitboxaltcoin/vuicoin/commit/bac02d0c9a) More accurate fee calculation in CreateDenominated (#3588)
 - [`baf18a35d5`](https://github.com/hitboxaltcoin/vuicoin/commit/baf18a35d5) More pruning improvements (#3579)
 - [`0297eb428a`](https://github.com/hitboxaltcoin/vuicoin/commit/0297eb428a) Change litemode to disablegovernance (#3577)
-- [`da38e2bf83`](https://github.com/hitboxaltcoin/vuicoin/commit/da38e2bf83) Change litemode from disabling all Dash specific features to disabling governance validation (#3488)
+- [`da38e2bf83`](https://github.com/hitboxaltcoin/vuicoin/commit/da38e2bf83) Change litemode from disabling all Vuicoin specific features to disabling governance validation (#3488)
 - [`772b6bfe7c`](https://github.com/hitboxaltcoin/vuicoin/commit/772b6bfe7c) Disable new connection handling and concentrated recovery for large LLMQs (#3548)
 - [`c72bc354f8`](https://github.com/hitboxaltcoin/vuicoin/commit/c72bc354f8) contrib: Move dustinface.pgp into contrib/gitian-keys (#3547)
 - [`0b70380fff`](https://github.com/hitboxaltcoin/vuicoin/commit/0b70380fff) Fix argument handling for devnets (#3549)
@@ -469,7 +469,7 @@ See detailed [set of changes](https://github.com/hitboxaltcoin/vuicoin/compare/v
 - [`acff9998e1`](https://github.com/hitboxaltcoin/vuicoin/commit/acff9998e1) UpgradeDBIfNeeded failure should require reindexing (#3516)
 - [`1163fc70a2`](https://github.com/hitboxaltcoin/vuicoin/commit/1163fc70a2) Use correct CURRENT_VERSION constants when checking ProTx version (#3515)
 - [`0186fdfe60`](https://github.com/hitboxaltcoin/vuicoin/commit/0186fdfe60) Fix chainlock scheduler handling (#3514)
-- [`b4008ee4fc`](https://github.com/hitboxaltcoin/vuicoin/commit/b4008ee4fc) Some Dashification (#3513)
+- [`b4008ee4fc`](https://github.com/hitboxaltcoin/vuicoin/commit/b4008ee4fc) Some Vuicoinification (#3513)
 - [`ab5aeed920`](https://github.com/hitboxaltcoin/vuicoin/commit/ab5aeed920) Optimize MN lists cache (#3506)
 - [`91d9329093`](https://github.com/hitboxaltcoin/vuicoin/commit/91d9329093) Make CDeterministicMN::internalId private to make sure it's set/accessed properly (#3505)
 - [`232430fac9`](https://github.com/hitboxaltcoin/vuicoin/commit/232430fac9) Fix ProcessNewBlock vs EnforceBestChainLock deadlocks in ActivateBestChain (#3492)
@@ -485,7 +485,7 @@ See detailed [set of changes](https://github.com/hitboxaltcoin/vuicoin/compare/v
 - [`0c5c99243a`](https://github.com/hitboxaltcoin/vuicoin/commit/0c5c99243a) rpc/wallet: Add coinType to queryOptions of listunspent (#3483)
 - [`3a56ed9ca6`](https://github.com/hitboxaltcoin/vuicoin/commit/3a56ed9ca6) Fix NO_WALLET=1 build (#3490)
 - [`926087aac6`](https://github.com/hitboxaltcoin/vuicoin/commit/926087aac6) Implement significantly improved createdenominations algorithm (#3479)
-- [`fe208c98e3`](https://github.com/hitboxaltcoin/vuicoin/commit/fe208c98e3) Feat. request for Dash Platform: `quorum sign` rpc command with additional quorumHash #3424 (#3446)
+- [`fe208c98e3`](https://github.com/hitboxaltcoin/vuicoin/commit/fe208c98e3) Feat. request for Vuicoin Platform: `quorum sign` rpc command with additional quorumHash #3424 (#3446)
 - [`4c1f65baae`](https://github.com/hitboxaltcoin/vuicoin/commit/4c1f65baae) Fix #3241 UX/UI - Introduce PrivateSend tab which allows to spend fully mixed coins only (#3442)
 - [`f46617dbab`](https://github.com/hitboxaltcoin/vuicoin/commit/f46617dbab) add litemode information to help texts regarding CL/IS and change getbestchainlock to throw an error if running in litemode (#3478)
 - [`5cabc8f5ca`](https://github.com/hitboxaltcoin/vuicoin/commit/5cabc8f5ca) Introduce ONLY_PRIVATESEND coin type to select fully mixed coins only (#3459)
@@ -577,7 +577,7 @@ See detailed [set of changes](https://github.com/hitboxaltcoin/vuicoin/compare/v
 - [`aca6af0a0e`](https://github.com/hitboxaltcoin/vuicoin/commit/aca6af0a0e) Use smaller LLMQs in regtest (#3269)
 - [`88da298082`](https://github.com/hitboxaltcoin/vuicoin/commit/88da298082) Add -whitelist to all nodes in smartfees.py (#3273)
 - [`7e3ed76e54`](https://github.com/hitboxaltcoin/vuicoin/commit/7e3ed76e54) Make a deep copy of extra_args before modifying it in set_vuicoin_test_params (#3270)
-- [`75bb7ec022`](https://github.com/hitboxaltcoin/vuicoin/commit/75bb7ec022) A few optimizations/speedups for Dash related tests (#3268)
+- [`75bb7ec022`](https://github.com/hitboxaltcoin/vuicoin/commit/75bb7ec022) A few optimizations/speedups for Vuicoin related tests (#3268)
 - [`2afdc8c6f6`](https://github.com/hitboxaltcoin/vuicoin/commit/2afdc8c6f6) Add basic PrivateSend RPC Tests (#3254)
 - [`dc656e3236`](https://github.com/hitboxaltcoin/vuicoin/commit/dc656e3236) Bump version to 0.16 on develop (#3239)
 - [`c182c6ca14`](https://github.com/hitboxaltcoin/vuicoin/commit/c182c6ca14) Upgrade Travis to use Bionic instead of Trusty (#3143)
@@ -606,7 +606,7 @@ As well as everyone that submitted issues and reviewed pull requests.
 Older releases
 ==============
 
-Dash was previously known as Darkcoin.
+Vuicoin was previously known as Darkcoin.
 
 Darkcoin tree 0.8.x was a fork of Litecoin tree 0.8, original name was XCoin
 which was first released on Jan/18/2014.
@@ -617,12 +617,12 @@ the 0.8.x tree and was first released on Mar/13/2014.
 Darkcoin tree 0.10.x used to be the closed source implementation of Darksend
 which was released open source on Sep/25/2014.
 
-Dash Core tree 0.11.x was a fork of Bitcoin Core tree 0.9,
-Darkcoin was rebranded to Dash.
+Vuicoin Core tree 0.11.x was a fork of Bitcoin Core tree 0.9,
+Darkcoin was rebranded to Vuicoin.
 
-Dash Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
+Vuicoin Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
 
-Dash Core tree 0.12.1.x was a fork of Bitcoin Core tree 0.12.
+Vuicoin Core tree 0.12.1.x was a fork of Bitcoin Core tree 0.12.
 
 These release are considered obsolete. Old release notes can be found here:
 

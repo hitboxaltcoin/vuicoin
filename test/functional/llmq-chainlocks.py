@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-# Copyright (c) 2015-2020 The Dash Core developers
+# Copyright (c) 2015-2020 The Vuicoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 import time
 
 from test_framework.mininode import *
-from test_framework.test_framework import DashTestFramework
+from test_framework.test_framework import VuicoinTestFramework
 from test_framework.util import *
 
 '''
@@ -16,7 +16,7 @@ Checks LLMQs based ChainLocks
 
 '''
 
-class LLMQChainLocksTest(DashTestFramework):
+class LLMQChainLocksTest(VuicoinTestFramework):
     def set_test_params(self):
         self.set_vuicoin_test_params(4, 3, fast_dip3_enforcement=True)
         self.set_vuicoin_dip8_activation(10)

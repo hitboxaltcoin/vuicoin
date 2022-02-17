@@ -9,7 +9,7 @@
 #define UNUSED
 #endif
 static const char UNUSED *vuicoin_strings[] = {
-QT_TRANSLATE_NOOP("vuicoin-core", "Dash Core"),
+QT_TRANSLATE_NOOP("vuicoin-core", "Vuicoin Core"),
 QT_TRANSLATE_NOOP("vuicoin-core", "The %s developers"),
 QT_TRANSLATE_NOOP("vuicoin-core", ""
 "%s file contains all private keys from this wallet. Do not share it with "

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# Copyright (c) 2018-2020 The Dash Core developers
+# Copyright (c) 2018-2020 The Vuicoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 from test_framework.mininode import *
-from test_framework.test_framework import DashTestFramework
+from test_framework.test_framework import VuicoinTestFramework
 from test_framework.util import isolate_node, sync_mempools, reconnect_isolated_node, assert_equal, \
     assert_raises_rpc_error
 
@@ -14,7 +14,7 @@ p2p-instantsend.py
 Tests InstantSend functionality (prevent doublespend for unconfirmed transactions)
 '''
 
-class InstantSendTest(DashTestFramework):
+class InstantSendTest(VuicoinTestFramework):
     def set_test_params(self):
         self.set_vuicoin_test_params(7, 3, fast_dip3_enforcement=True)
         # set sender,  receiver,  isolated nodes

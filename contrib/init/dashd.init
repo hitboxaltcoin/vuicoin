@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#  vuicoind The Dash Core server.
+#  vuicoind The Vuicoin Core server.
 #
 #
 # chkconfig: 345 80 20

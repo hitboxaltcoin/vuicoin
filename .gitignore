@@ -84,7 +84,7 @@ libconftest.dylib*
 *.qm
 Makefile
 vuicoin-qt
-Dash-Qt.app
+Vuicoin-Qt.app
 background.tiff*
 !/depends/Makefile
 

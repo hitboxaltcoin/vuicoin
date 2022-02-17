@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019 The Dash Core developers
+// Copyright (c) 2014-2019 The Vuicoin Core developers
 // Distributed under the MIT software license, see the accompanying
 #ifndef VUICOIN_HDCHAIN_H
 #define VUICOIN_HDCHAIN_H

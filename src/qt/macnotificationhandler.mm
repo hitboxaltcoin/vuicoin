@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.vuicoin.Dash-Qt";
+        return @"org.vuicoin.Vuicoin-Qt";
     } else {
         return [self __bundleIdentifier];
     }

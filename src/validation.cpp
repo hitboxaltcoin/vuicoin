@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
-// Copyright (c) 2014-2020 The Dash Core developers
+// Copyright (c) 2014-2020 The Vuicoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -59,7 +59,7 @@
 #include <boost/thread.hpp>
 
 #if defined(NDEBUG)
-# error "Dash Core cannot be compiled without assertions."
+# error "Vuicoin Core cannot be compiled without assertions."
 #endif
 
 #define MICRO 0.000001
@@ -681,7 +681,7 @@ static bool AcceptToMemoryPoolWorker(const CChainParams& chainparams, CTxMemPool
         {
             const CTransaction *ptxConflicting = itConflicting->second;
 
-            // Transaction conflicts with mempool and RBF doesn't exist in Dash
+            // Transaction conflicts with mempool and RBF doesn't exist in Vuicoin
             return state.Invalid(false, REJECT_DUPLICATE, "txn-mempool-conflict");
         }
     }
@@ -1970,7 +1970,7 @@ static int64_t nTimeSubsidy = 0;
 static int64_t nTimeValueValid = 0;
 static int64_t nTimePayeeValid = 0;
 static int64_t nTimeProcessSpecial = 0;
-static int64_t nTimeDashSpecific = 0;
+static int64_t nTimeVuicoinSpecific = 0;
 static int64_t nTimeConnect = 0;
 static int64_t nTimeIndex = 0;
 static int64_t nTimeCallbacks = 0;
@@ -2353,8 +2353,8 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
     int64_t nTime5_5 = GetTimeMicros(); nTimeProcessSpecial += nTime5_5 - nTime5_4;
     LogPrint(BCLog::BENCHMARK, "      - ProcessSpecialTxsInBlock: %.2fms [%.2fs (%.2fms/blk)]\n", MICRO * (nTime5_5 - nTime5_4), nTimeProcessSpecial * MICRO, nTimeProcessSpecial * MILLI / nBlocksTotal);
 
-    int64_t nTime5 = GetTimeMicros(); nTimeDashSpecific += nTime5 - nTime4;
-    LogPrint(BCLog::BENCHMARK, "    - Dash specific: %.2fms [%.2fs (%.2fms/blk)]\n", MICRO * (nTime5 - nTime4), nTimeDashSpecific * MICRO, nTimeDashSpecific * MILLI / nBlocksTotal);
+    int64_t nTime5 = GetTimeMicros(); nTimeVuicoinSpecific += nTime5 - nTime4;
+    LogPrint(BCLog::BENCHMARK, "    - Vuicoin specific: %.2fms [%.2fs (%.2fms/blk)]\n", MICRO * (nTime5 - nTime4), nTimeVuicoinSpecific * MICRO, nTimeVuicoinSpecific * MILLI / nBlocksTotal);
 
     // END VUICOIN
 

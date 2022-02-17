@@ -1,4 +1,4 @@
-Dash Core staging tree 0.16
+Vuicoin Core staging tree 0.16
 ===========================
 
 `master:` [![Build Status](https://travis-ci.org/hitboxaltcoin/vuicoin.svg?branch=master)](https://travis-ci.org/hitboxaltcoin/vuicoin) `develop:` [![Build Status](https://travis-ci.org/hitboxaltcoin/vuicoin.svg?branch=develop)](https://travis-ci.org/hitboxaltcoin/vuicoin/branches)
@@ -6,23 +6,23 @@ Dash Core staging tree 0.16
 https://www.vuicoin.org
 
 
-What is Dash?
+What is Vuicoin?
 -------------
 
-Dash is an experimental digital currency that enables instant, private
-payments to anyone, anywhere in the world. Dash uses peer-to-peer technology
+Vuicoin is an experimental digital currency that enables instant, private
+payments to anyone, anywhere in the world. Vuicoin uses peer-to-peer technology
 to operate with no central authority: managing transactions and issuing money
-are carried out collectively by the network. Dash Core is the name of the open
+are carried out collectively by the network. Vuicoin Core is the name of the open
 source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Dash Core software, see https://www.vuicoin.org/get-vuicoin/.
+the Vuicoin Core software, see https://www.vuicoin.org/get-vuicoin/.
 
 
 License
 -------
 
-Dash Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Vuicoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
@@ -30,7 +30,7 @@ Development Process
 
 The `master` branch is meant to be stable. Development is normally done in separate branches.
 [Tags](https://github.com/hitboxaltcoin/vuicoin/tags) are created to indicate new official,
-stable release versions of Dash Core.
+stable release versions of Vuicoin Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -66,7 +66,7 @@ Translations
 ------------
 
 Changes to translations as well as new translations can be submitted to
-[Dash Core's Transifex page](https://www.transifex.com/projects/p/vuicoin/).
+[Vuicoin Core's Transifex page](https://www.transifex.com/projects/p/vuicoin/).
 
 Translations are periodically pulled from Transifex and merged into the git repository. See the
 [translation process](doc/translation_process.md) for details on how this works.

@@ -135,7 +135,7 @@ public:
 };
 
 /**
- * Dash RPC command dispatcher.
+ * Vuicoin RPC command dispatcher.
  */
 class CRPCTable
 {

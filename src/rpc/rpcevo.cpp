@@ -1,4 +1,4 @@
-// Copyright (c) 2018-2020 The Dash Core developers
+// Copyright (c) 2018-2020 The Vuicoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -120,7 +120,7 @@ std::string GetHelpString(int nParamNum, std::string strParamName)
     return strprintf(it->second, nParamNum);
 }
 
-// Allows to specify Dash address or priv key. In case of Dash address, the priv key is taken from the wallet
+// Allows to specify Vuicoin address or priv key. In case of Vuicoin address, the priv key is taken from the wallet
 static CKey ParsePrivKey(CWallet* pwallet, const std::string &strKeyOrAddress, bool allowAddresses = true) {
     CTxDestination dest = DecodeDestination(strKeyOrAddress);
     if (allowAddresses && IsValidDestination(dest)) {
@@ -320,7 +320,7 @@ void protx_register_fund_help(CWallet* const pwallet)
 {
     throw std::runtime_error(
             "protx register_fund \"collateralAddress\" \"ipAndPort\" \"ownerAddress\" \"operatorPubKey\" \"votingAddress\" operatorReward \"payoutAddress\" ( \"fundAddress\" )\n"
-            "\nCreates, funds and sends a ProTx to the network. The resulting transaction will move 1000 Dash\n"
+            "\nCreates, funds and sends a ProTx to the network. The resulting transaction will move 1000 Vuicoin\n"
             "to the address specified by collateralAddress and will then function as the collateral of your\n"
             "masternode.\n"
             "A few of the limitations you see in the arguments are temporary and might be lifted after DIP3\n"
@@ -516,7 +516,7 @@ UniValue protx_register(const JSONRPCRequest& request)
     if (!request.params[paramIdx + 6].isNull()) {
         fundDest = DecodeDestination(request.params[paramIdx + 6].get_str());
         if (!IsValidDestination(fundDest))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Dash address: ") + request.params[paramIdx + 6].get_str());
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Vuicoin address: ") + request.params[paramIdx + 6].get_str());
     }
 
     FundSpecialTx(pwallet, tx, ptx, fundDest);
@@ -685,7 +685,7 @@ UniValue protx_update_service(const JSONRPCRequest& request)
     if (!request.params[5].isNull()) {
         feeSource = DecodeDestination(request.params[5].get_str());
         if (!IsValidDestination(feeSource))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Dash address: ") + request.params[5].get_str());
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Vuicoin address: ") + request.params[5].get_str());
     } else {
         if (ptx.scriptOperatorPayout != CScript()) {
             // use operator reward address as default source for fees
@@ -784,7 +784,7 @@ UniValue protx_update_registrar(const JSONRPCRequest& request)
     if (!request.params[5].isNull()) {
         feeSourceDest = DecodeDestination(request.params[5].get_str());
         if (!IsValidDestination(feeSourceDest))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Dash address: ") + request.params[5].get_str());
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Vuicoin address: ") + request.params[5].get_str());
     }
 
     FundSpecialTx(pwallet, tx, ptx, feeSourceDest);
@@ -859,7 +859,7 @@ UniValue protx_revoke(const JSONRPCRequest& request)
     if (!request.params[4].isNull()) {
         CTxDestination feeSourceDest = DecodeDestination(request.params[4].get_str());
         if (!IsValidDestination(feeSourceDest))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Dash address: ") + request.params[4].get_str());
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Vuicoin address: ") + request.params[4].get_str());
         FundSpecialTx(pwallet, tx, ptx, feeSourceDest);
     } else if (dmn->pdmnState->scriptOperatorPayout != CScript()) {
         // Using funds from previousely specified operator payout address

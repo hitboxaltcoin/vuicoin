@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-# Copyright (c) 2015-2020 The Dash Core developers
+# Copyright (c) 2015-2020 The Vuicoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-from test_framework.test_framework import DashTestFramework
+from test_framework.test_framework import VuicoinTestFramework
 from test_framework.util import *
 
 '''
@@ -13,7 +13,7 @@ Checks intra quorum connections
 
 '''
 
-class LLMQConnections(DashTestFramework):
+class LLMQConnections(VuicoinTestFramework):
     def set_test_params(self):
         self.set_vuicoin_test_params(15, 14, fast_dip3_enforcement=True)
         self.set_vuicoin_llmq_test_params(5, 3)

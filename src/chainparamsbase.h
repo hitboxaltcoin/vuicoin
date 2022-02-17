@@ -11,7 +11,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between vuicoin-cli and vuicoind)
- * of a given instance of the Dash system.
+ * of a given instance of the Vuicoin system.
  */
 class CBaseChainParams
 {

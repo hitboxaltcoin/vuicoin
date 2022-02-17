@@ -17,7 +17,7 @@
 - [`8700f460e3`](https://github.com/hitboxaltcoin/vuicoin/commit/8700f460e3) Merge #12305: [docs] [refactor] Add help messages for datadir path mangling
 - [`28a8db3ca7`](https://github.com/hitboxaltcoin/vuicoin/commit/28a8db3ca7) Fix sourceFile
 - [`97907b051f`](https://github.com/hitboxaltcoin/vuicoin/commit/97907b051f) Fix autobackup functionality
-- [`6f4260f860`](https://github.com/hitboxaltcoin/vuicoin/commit/6f4260f860) bitcoin -> Dash Core
+- [`6f4260f860`](https://github.com/hitboxaltcoin/vuicoin/commit/6f4260f860) bitcoin -> Vuicoin Core
 - [`02dfb89b02`](https://github.com/hitboxaltcoin/vuicoin/commit/02dfb89b02) fix test 50 -> 500
 - [`4aa8a9a206`](https://github.com/hitboxaltcoin/vuicoin/commit/4aa8a9a206) resolve DEFAULT_WALLET_DAT being removed
 - [`7999080c04`](https://github.com/hitboxaltcoin/vuicoin/commit/7999080c04) Merge #11687: External wallet files
@@ -280,7 +280,7 @@
 - [`4b0a860f8f`](https://github.com/hitboxaltcoin/vuicoin/commit/4b0a860f8f) Merge #11870: wallet: Remove unnecessary mempool lock in ReacceptWalletTransactions
 - [`b695b67d5f`](https://github.com/hitboxaltcoin/vuicoin/commit/b695b67d5f) Merge #11516: crypto: Add test cases covering the relevant HMAC-SHA{256,512} key length boundaries
 - [`1a754b5d7b`](https://github.com/hitboxaltcoin/vuicoin/commit/1a754b5d7b) Merge #11829: Test datadir specified in conf file exists
-- [`f16a0f79aa`](https://github.com/hitboxaltcoin/vuicoin/commit/f16a0f79aa) bitcoin -> Dash
+- [`f16a0f79aa`](https://github.com/hitboxaltcoin/vuicoin/commit/f16a0f79aa) bitcoin -> Vuicoin
 - [`42583216fe`](https://github.com/hitboxaltcoin/vuicoin/commit/42583216fe) addressWidget -> search_widget
 - [`f32949fa91`](https://github.com/hitboxaltcoin/vuicoin/commit/f32949fa91) Merge #11834: [verify-commits] Fix gpg.sh's echoing for commits with '\n'
 - [`608fad56a0`](https://github.com/hitboxaltcoin/vuicoin/commit/608fad56a0) Merge #11781: Add `-debuglogfile` option
@@ -301,8 +301,8 @@
 - [`0dbfdad044`](https://github.com/hitboxaltcoin/vuicoin/commit/0dbfdad044) Merge #11655: net: Assert state.m_chain_sync.m_work_header in ConsiderEviction
 - [`5bbbce30eb`](https://github.com/hitboxaltcoin/vuicoin/commit/5bbbce30eb) Merge #11680: [docs] Add instructions for lcov report generation
 - [`46d2cc6159`](https://github.com/hitboxaltcoin/vuicoin/commit/46d2cc6159) Merge #11035: [contrib] Add Valgrind suppressions file
-- [`67c8484e20`](https://github.com/hitboxaltcoin/vuicoin/commit/67c8484e20) More of 11583 for Dash-specific code
-- [`6eb6298bc2`](https://github.com/hitboxaltcoin/vuicoin/commit/6eb6298bc2) More of 12218 for Dash-specific code
+- [`67c8484e20`](https://github.com/hitboxaltcoin/vuicoin/commit/67c8484e20) More of 11583 for Vuicoin-specific code
+- [`6eb6298bc2`](https://github.com/hitboxaltcoin/vuicoin/commit/6eb6298bc2) More of 12218 for Vuicoin-specific code
 - [`0255027fb6`](https://github.com/hitboxaltcoin/vuicoin/commit/0255027fb6) Fix "\n"s
 - [`e7beff5bcd`](https://github.com/hitboxaltcoin/vuicoin/commit/e7beff5bcd) Merge #12855: net: Minor accumulated cleanups
 - [`a3ea0e93ef`](https://github.com/hitboxaltcoin/vuicoin/commit/a3ea0e93ef) Merge #12626: Limit the number of IPs addrman learns from each DNS seeder
